@@ -21,7 +21,8 @@ export const env = createEnv({
 		NODE_ENV: process.env.NODE_ENV,
 		SUPABASE_URL: process.env.SUPABASE_URL,
 		SUPABASE_API_KEY: process.env.SUPABASE_API_KEY,
-		HUGGING_FACE_API_KEY: process.env.HUGGING_FACE_API_KEY
+		HUGGING_FACE_API_KEY: process.env.HUGGING_FACE_API_KEY,
+		GCP_KEY: process.env.GCP_KEY
 	},
 
 	/**
@@ -34,6 +35,7 @@ export const env = createEnv({
 		NODE_ENV: z.string(),
 		SUPABASE_URL: z.string().min(1),
 		SUPABASE_API_KEY: z.string().min(1),
-		HUGGING_FACE_API_KEY: z.string().min(1)
+		HUGGING_FACE_API_KEY: z.string().min(1),
+		GCP_KEY: z.string().min(1)
 	}
 })
